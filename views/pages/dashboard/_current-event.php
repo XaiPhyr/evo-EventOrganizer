@@ -3,12 +3,12 @@
     $current_attendance = $event->get('attendance', $item->event_header, 'current');
     if ($current_date == $date && $current_attendance < $item->maxAttendance) { ?>
 
-        <div style="cursor:pointer" class="col-12 col-lg-4" onclick="preview(<?php echo '\'' . $item->eventCode . '\'' ?>)" title="<?php echo $item->eventName ?>">
+        <div style="cursor:pointer" class="col-12 mb-3" onclick="preview(<?php echo '\'' . $item->eventCode . '\'' ?>)" title="<?php echo $item->eventName ?>">
             <div class="card border-0">
                 <div class="row">
                     <div class="col-3 bg-success text-white border-radius-left" align="center">
                         <div class="card-body">
-                            <div class="h2 font-weight-bold"><?php echo $component->dateFormat($item->startDate, 'day') ?></div>
+                            <div class="h1 font-weight-bold"><?php echo $component->dateFormat($item->startDate, 'day') ?></div>
                             <p><?php echo $component->dateFormat($item->startDate) ?></p>
                         </div>
                     </div>

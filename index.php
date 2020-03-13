@@ -6,6 +6,16 @@ switch ($_GET['page']) {
         $page->dashboard();
         break;
 
+    case 'login':
+        $page->login();
+        break;
+
+    case 'logout':
+        session_start();
+        session_destroy();
+        header("location: .?page=login");
+        break;
+
     case 'eventlists':
         $page->publiceventlists();
         break;
@@ -52,5 +62,17 @@ switch ($_GET['page']) {
 
     case 'announcementupdate':
         $page->announcements('update');
+        break;
+
+    case 'accounts':
+        $page->accounts();
+        break;
+
+    case 'accountdetails':
+        $page->accounts('accountdetails');
+        break;
+
+    case 'accountupdate':
+        $page->accounts('accountupdate');
         break;
 }

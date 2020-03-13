@@ -81,3 +81,16 @@ CREATE TABLE IF NOT EXISTS evo_app.`venues`(
     `modified` DATETIME DEFAULT NULL,
     `flag` INT(1) DEFAULT 0
 ) ENGINE = InnoDB AUTO_INCREMENT = 12001 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
+
+/* Mar 13, 2020 */
+CREATE TABLE IF NOT EXISTS evo_app.`accounts`(
+    `Id` INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `username` VARCHAR(45) DEFAULT NULL,
+    `password` VARCHAR(45) DEFAULT NULL,
+    `image` VARCHAR(45) DEFAULT NULL,
+    `email` VARCHAR(45) DEFAULT NULL,
+    `status` VARCHAR(15) DEFAULT NULL,
+    `created` DATETIME DEFAULT NULL,
+    `modified` DATETIME DEFAULT NULL,
+    `flag` INT(1) DEFAULT 0
+) ENGINE = InnoDB AUTO_INCREMENT = 90001 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;

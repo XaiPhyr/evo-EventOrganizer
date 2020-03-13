@@ -28,7 +28,7 @@ class VenuesModels extends QueryGetter
     {
         if (empty($id)) {
             $post = "INSERT INTO venues SET
-            venuename = '$venuename ',
+            venuename = '$venuename',
             created = now(), flag = 1";
 
             return $this->crud($post, '', 'c');

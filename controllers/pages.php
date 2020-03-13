@@ -97,6 +97,28 @@ class PagesControllers
                 break;
         }
     }
+
+    function accounts($flag = 'lists')
+    {
+        switch ($flag) {
+            default:
+                return $this->webpage('accountslists/accountslists.php');
+                break;
+
+            case 'accountdetails':
+                return $this->webpage('accountsdetails/accountsdetails.php');
+                break;
+
+            case 'accountupdate':
+                return $this->webpage('accountsupdate/accountsupdate.php');
+                break;
+        }
+    }
+
+    function login()
+    {
+        return include("views/pages/login/index.php");
+    }
 }
 
 $page = new PagesControllers;

@@ -84,6 +84,32 @@ class Components
     {
         return "<div " . $value = $value ? "class='text-success'> Vacant" : "class='text-danger'> Occupied" . "</div>";
     }
+
+    function status($value)
+    {
+        switch ($value) {
+            default:
+                return "<div style='color:green'>Active</div>";
+                break;
+
+            case 'I':
+                return "<div style='color:red'>Inactive</div>";
+                break;
+        }
+    }
+
+    function accountsStatus($value)
+    {
+        switch ($value) {
+            default:
+                return "<div class='badge badge-primary'>Administrator</div>";
+                break;
+
+            case 'User':
+                return "<div class='badge badge-secondary'>User</div>";
+                break;
+        }
+    }
 }
 
 $component = new Components;

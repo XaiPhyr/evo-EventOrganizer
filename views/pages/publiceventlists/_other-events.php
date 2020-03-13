@@ -1,6 +1,6 @@
 <?php foreach ($lists as $items) { ?>
     <div class="col-12 col-lg-4 col-md-6">
-        <div style="cursor:pointer" onclick="preview(<?php echo $items->event_header ?>)" title="<?php echo $items->eventName ?>">
+        <div style="cursor:pointer" onclick="preview(<?php echo '\'' . $items->eventCode . '\'' ?>)" title="<?php echo $items->eventName ?>">
             <div class="card border-0 mb-3">
                 <div class="row">
                     <div class="col-3 bg-info text-white border-radius-left p-0" align="center">
@@ -15,7 +15,7 @@
                             <div class="h4"><?php echo $items->eventName ?></div>
                             <p>
                                 <img style="width: 20px; height: 20px;" src="assets/icons/feathericons/clock.svg" alt="">
-                                <?php echo $component->dateFormat($items->startDate, 'time') ?>
+                                <span><?php echo $component->dateFormat($items->startDate, 'time') ?></span>
                             </p>
                             <p><?php echo $items->eventShortDesc ?></p>
                         </div>

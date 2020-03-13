@@ -49,6 +49,29 @@ switch ($_POST['save']) {
         $venue->venue($id, $name);
         header("location: .?page=venues");
         break;
+
+    case 'accounts':
+        include("models/accounts.php");
+
+        $id = $_POST['id'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $email = $_POST['email'];
+        $status = $_POST['status'];
+
+        $account->accounts($id, $username, $password, NULL, $email, $status);
+        header("location: .?page=accounts");
+        break;
+
+    case 'login':
+        include("models/accounts.php");
+
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        if ($account->get('login', $username, $password)) header("location: .");
+        else header("location: .?page=login");
+        break;
 }
 
 switch ($_POST['inactive']) {

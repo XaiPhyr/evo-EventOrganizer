@@ -1,8 +1,8 @@
 <?php foreach ($lists as $item) {
+    $count++;
     $date = $component->dateFormat($item->startDate, 'date');
     $month = $component->dateFormat($item->startDate, 'month');
-    if ($current_month == $month && $current_date != $date) {
-        $count++; ?>
+    if ($current_month == $month && $current_date != $date) { ?>
 
         <div style="cursor:pointer" class="col-12 col-lg-4 mb-3" onclick="preview(<?php echo '\'' . $item->eventCode . '\'' ?>)" title="<?php echo $item->eventName ?>">
             <div class="card border-0">
