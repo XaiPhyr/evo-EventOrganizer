@@ -10,7 +10,7 @@
                     <div class="col-3 bg-info text-white border-radius-left" align="center">
                         <div class="card-body">
                             <div class="h2 font-weight-bold"><?php echo $component->dateFormat($item->startDate, 'day') ?></div>
-                            <p><?php echo $component->dateFormat($item->startDate) ?></p>
+                            <p><?php echo $component->dateFormat($item->startDate, 'dashboard') ?></p>
                         </div>
                     </div>
 

@@ -8,6 +8,15 @@ class Components
 
         switch ($format) {
             default:
+                return $formated_date->format('m/d/yy h:i A');
+                break;
+
+            case 'preregistration':
+                $formated_date->modify('-1 week');
+                return $formated_date->format('m/d/yy');
+                break;
+
+            case 'dashboard':
                 return $formated_date->format('M Y h:i A');
                 break;
 
@@ -37,6 +46,7 @@ class Components
 
             case 'month-year':
                 return $formated_date->format('M Y');
+                break;
         }
     }
 

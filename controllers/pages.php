@@ -117,7 +117,7 @@ class PagesControllers
 
     function login()
     {
-        return include("views/pages/login/index.php");
+        return $this->webpage('login/index.php');
     }
 }
 

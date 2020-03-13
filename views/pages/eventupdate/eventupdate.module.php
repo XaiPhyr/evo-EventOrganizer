@@ -16,4 +16,10 @@ $current_time = $component->dateFormat('now', 'preview-time');
         else window.location.href = '?page=events'
 
     }
+
+    function getDate() {
+        var x = document.getElementById('startdate').value;
+        var y = document.getElementById('enddate').innerHTML = x;
+        console.log(y);
+    }
 </script>

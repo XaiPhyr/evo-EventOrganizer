@@ -18,7 +18,7 @@ switch ($_POST['save']) {
         $shortdesc = $_POST['shortdesc'];
         $desc = $_POST['eventdesc'];
 
-        $event->event_header($id, $code, $name, $attendance,  $startdate, $enddate, $regstartdate, $regenddate);
+        $event->event_header($id, $code, $name, $attendance,  $startdate, $enddate, null, null);
         $event->event_detail($id, $handler, $shortdesc, $desc, $venue, $club);
 
         header("location: .?page=details&code=" . $code);

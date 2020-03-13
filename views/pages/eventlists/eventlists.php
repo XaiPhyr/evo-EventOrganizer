@@ -10,8 +10,9 @@ include("eventlists.module.php");
 
                 <thead class="thead-dark">
                     <tr>
-                        <th width="5%"></th>
+                        <th></th>
                         <th>Name</th>
+                        <th>Preregistration</th>
                         <th>Schedule</th>
                         <th>Room</th>
                     </tr>
@@ -25,7 +26,8 @@ include("eventlists.module.php");
                         <tr onclick="preview(<?php echo '\'' . $item->eventCode . '\'' ?>)">
                             <td><?php echo $count ?></td>
                             <td style="color: <?php if ($current_date == $date) echo "green" ?>"><?php echo $item->eventName ?></td>
-                            <td style="color:green"><?php echo $component->dateFormat($item->startDate) ?></td>
+                            <td style="color:red"><?php echo $component->dateFormat($item->startDate, 'preregistration') ?></td>
+                            <td style="color:green"><?php echo $component->dateFormat($item->startDate, 'date') ?></td>
                             <td><?php echo $item->eventVenue ?></td>
                         </tr>
                     <?php } ?>

@@ -2,7 +2,7 @@
 include("publiceventlists.module.php");
 ?>
 
-<div class="container col-10">
+<div class="container col-11">
     <legend class="h3 mb-3" align="center">Events</legend>
     <div class="row p-0 m-0">
         <div class="col-12 col-lg-3">

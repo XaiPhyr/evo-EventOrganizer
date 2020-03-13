@@ -44,7 +44,7 @@ include("eventupdate.module.php");
                             </div>
                         </div>
 
-                        <br>
+                        <!-- <br>
                         <legend class="mb-0">Registration Schedule</legend>
                         <div class="row">
                             <div class="form-group col-6 col-lg-6">
@@ -58,7 +58,7 @@ include("eventupdate.module.php");
                                 <input type="date" name="regenddate" id="" class="form-control" value="<?php if ($code) echo $component->dateFormat($data->registrationEndDate, 'preview-date');
                                                                                                         else echo $current_date ?>">
                             </div>
-                        </div>
+                        </div> -->
 
                         <br>
                         <legend class="mb-0">Event Schedule</legend>
@@ -67,8 +67,8 @@ include("eventupdate.module.php");
                                 <label class="mb-0">Start</label>
                                 <div class="row">
                                     <div class="col-12 col-lg-6">
-                                        <strong>Date</strong>: <input type="date" name="startdate" id="" value="<?php if ($code) echo $component->dateFormat($data->startDate, 'preview-date');
-                                                                                                                else echo $current_date ?>" class="form-control">
+                                        <strong>Date</strong>: <input onchange="getDate()" type="date" name="startdate" id="startdate" value="<?php if ($code) echo $component->dateFormat($data->startDate, 'preview-date');
+                                                                                                                                                else echo $current_date ?>" class="form-control">
                                     </div>
                                     <div class="col-12 col-lg-6">
                                         <strong>Time</strong>: <input type="time" name="starttime" id="" value="<?php if ($code) echo $component->dateFormat($data->startDate, 'preview-time');
@@ -81,7 +81,7 @@ include("eventupdate.module.php");
                                 <label class="mb-0">End</label>
                                 <div class="row">
                                     <div class="col-12 col-lg-6">
-                                        <strong>Date</strong>: <input type="date" name="enddate" id="" value="<?php if ($code) echo $component->dateFormat($data->endDate, 'preview-date');
+                                        <strong>Date</strong>: <input type="date" name="enddate" id="enddate" value="<?php if ($code) echo $component->dateFormat($data->endDate, 'preview-date');
                                                                                                                 else echo $current_date ?>" class="form-control">
                                     </div>
                                     <div class="col-12 col-lg-6">
