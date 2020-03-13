@@ -4,9 +4,9 @@
             <div class="card border-0 mb-3">
                 <div class="row">
                     <div class="col-3 bg-info text-white border-radius-left p-0" align="center">
-                        <div class="card-body">
+                        <div class="card-body my-5">
                             <div class="h2 font-weight-bold"><?php echo $component->dateFormat($items->startDate, 'day') ?></div>
-                            <div class=""><?php echo $component->dateFormat($items->startDate, 'month-year') ?></div>
+                            <div style="font-size: .875rem" class=""><?php echo $component->dateFormat($items->startDate, 'month-year') ?></div>
                         </div>
                     </div>
 
