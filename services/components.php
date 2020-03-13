@@ -85,28 +85,15 @@ class Components
         return "<div " . $value = $value ? "class='text-success'> Vacant" : "class='text-danger'> Occupied" . "</div>";
     }
 
-    function status($value)
+    function status($value = 'announcements', $page)
     {
-        switch ($value) {
+        switch ($page) {
             default:
-                return "<div style='color:green'>Active</div>";
+                return $value = ($value == 'A') ? "<div style='color:green'>Active</div>" : "<div style='color:red'>Inactive</div>";
                 break;
 
-            case 'I':
-                return "<div style='color:red'>Inactive</div>";
-                break;
-        }
-    }
-
-    function accountsStatus($value)
-    {
-        switch ($value) {
-            default:
-                return "<div class='badge badge-primary'>Administrator</div>";
-                break;
-
-            case 'User':
-                return "<div class='badge badge-secondary'>User</div>";
+            case 'accounts':
+                return $value = ($value == 'Admin') ? "<div class='badge badge-primary'>Administrator</div>" : "<div class='badge badge-secondary'>User</div>";
                 break;
         }
     }

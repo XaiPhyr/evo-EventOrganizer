@@ -24,7 +24,7 @@ include("accountslists.module.php");
                         <tr onclick="preview(<?php echo '\'' . $item->username . '\'' ?>)">
                             <td><?php echo $count ?></td>
                             <td><?php echo $item->username ?></td>
-                            <td><?php echo $component->accountsStatus($item->status) ?></td>
+                            <td><?php echo $component->status($item->status, 'accounts') ?></td>
                             <td><?php echo $component->dateFormat($item->created) ?></td>
                         </tr>
                     <?php } ?>
