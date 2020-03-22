@@ -3,7 +3,8 @@ include("dashboard.module.php");
 ?>
 
 <div class="container col-11">
-    <div class="row">
+    <h1>Hello World</h1>
+    <!-- <div class="row">
         <div class="col-12">
             <?php include("_announcements.php"); ?>
         </div>
@@ -22,5 +23,5 @@ include("dashboard.module.php");
         <div class="nav mb-5 justify-content-center mx-auto">
             <a style="font-size: .875rem" href="?page=eventlists" class="text-decoration-none">Show more...</a>
         </div>
-    <?php } ?>
+    <?php } ?> -->
 </div>
