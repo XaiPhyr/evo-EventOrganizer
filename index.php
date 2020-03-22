@@ -1,5 +1,5 @@
 <?php
-include("controllers/pages.php");
+// include("controllers/pages.php");
 
 switch ($_GET['page']) {
     default:
