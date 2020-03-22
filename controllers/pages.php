@@ -8,11 +8,11 @@ class PagesControllers
      */
     function webpage($page)
     {
-        $page = include("views/header.php");
-        $page .= include("views/pages/" . $page);
-        $page .= include("views/footer.php");
-        
-        return $page;
+        $content = include("views/header.php");
+        $content .= include("views/pages/" . $page);
+        $content .= include("views/footer.php");
+
+        return $content;
     }
 
     /**

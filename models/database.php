@@ -25,8 +25,8 @@ class Database extends BASEURL
 {
     function __construct()
     {
-        // BASEURL::online_account();
-        BASEURL::static_account();
+        BASEURL::online_account();
+        // BASEURL::static_account();
     }
 
     public function db_connect()
