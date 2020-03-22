@@ -2,7 +2,7 @@
 include("models/events.php");
 include("services/components.php");
 $lists = $event->get('', '', '');
-$announcements = $event->get('announcements');
+$announcements = $event->get('announcements', '', '');
 
 $current_date = $component->dateFormat('now', 'date');
 $current_month = $component->dateFormat('now', 'month');
