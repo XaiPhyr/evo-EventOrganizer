@@ -5,9 +5,10 @@ include("services/components.php");
 $eventlists = $event->get('', '', '');
 $current_date = $component->dateFormat('now', 'date');
 
-if ($_GET['flag'] == 'inactive') {
+if (@$_GET['flag'] == 'inactive') {
     $eventlists = $event->get('inactive');
 }
+$count = 0;
 ?>
 
 <script type="text/javascript">

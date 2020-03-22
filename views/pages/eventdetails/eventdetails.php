@@ -11,7 +11,7 @@ include("eventdetails.module.php");
                     <div class="float-right btn-group">
                         <?php echo $component->preview_buttons('edit', $data->eventCode); ?>
                         <?php echo $component->preview_buttons($data->flag, 'event'); ?>
-                        <?php echo $component->preview_buttons('close'); ?>
+                        <?php echo $component->preview_buttons('close', ''); ?>
                     </div>
                 <?php } else { ?>
                     <form action="" method="post">

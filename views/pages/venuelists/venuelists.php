@@ -19,7 +19,7 @@ include("venuelists.module.php");
 
                 <tbody style="cursor:pointer">
                     <?php foreach ($venuelists as $item) {
-                        $count++ ?>
+                        @$count++ ?>
                         <tr onclick="preview(<?php echo $item->Id ?>)">
                             <th><?php echo $count ?></th>
                             <td><?php echo $item->venuename ?></td>

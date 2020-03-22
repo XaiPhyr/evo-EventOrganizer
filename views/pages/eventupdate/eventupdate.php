@@ -11,7 +11,7 @@ include("eventupdate.module.php");
                         <div class="row">
                             <div class="form-group col-12 col-lg-3">
                                 <strong>Code</strong>:
-                                <input type="text" name="code" value="<?php if ($code) echo $data->eventCode ?>" id="" class="form-control" <?php if ($data->eventCode != null) echo "readonly" ?>>
+                                <input type="text" name="code" value="<?php if (@$code) echo $data->eventCode ?>" id="" class="form-control" <?php if (@$data->eventCode != null) echo "readonly" ?>>
                             </div>
 
                             <div class="form-group col-12 col-lg-6">
@@ -33,8 +33,8 @@ include("eventupdate.module.php");
                             <div class="form-group col-12 col-lg-4">
                                 <strong>Venue</strong>:
                                 <select name="venue" id="" class="form-control">
-                                    <?php foreach ($venues as $venue) { ?>
-                                        <option value="<?php echo $venue->venuename ?>" <?php if ($data->eventVenue == $venue->venuename) echo "selected" ?>><?php echo $venue->venuename ?></option>
+                                    <?php foreach (@$venues as $venue) { ?>
+                                        <option value="<?php echo @$venue->venuename ?>" <?php if (@$data->eventVenue == @$venue->venuename) echo "selected" ?>><?php echo @$venue->venuename ?></option>
                                     <?php } ?>
                                 </select>
                             </div>
@@ -110,9 +110,9 @@ include("eventupdate.module.php");
                 </div>
 
                 <div class="float-right">
-                    <input type="hidden" name="id" value="<?php echo $data->event_header ?>">
+                    <input type="hidden" name="id" value="<?php echo @$data->event_header ?>">
                     <button type="submit" name="save" value="event" class="btn btn-primary">Save</button>
-                    <button type="button" class="btn btn-secondary" onclick="returnToPage(<?php echo '\'' . $data->eventCode . '\'' ?>)">Cancel</button>
+                    <button type="button" class="btn btn-secondary" onclick="returnToPage(<?php echo '\'' . @$data->eventCode . '\'' ?>)">Cancel</button>
                 </div>
             </form>
         </div>
