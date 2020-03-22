@@ -3,7 +3,7 @@ include("controllers/pages.php");
 
 switch ($_GET['page']) {
     default:
-        $page->dashboard();
+        return $page->dashboard();
         break;
 
     case 'login':
