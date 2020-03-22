@@ -1,7 +1,7 @@
 <?php
 include("models/announcements.php");
 include("services/components.php");
-$announcementlists = $announcement->get();
+$announcementlists = $announcement->get('', '', '');
 ?>
 
 <script type="text/javascript">

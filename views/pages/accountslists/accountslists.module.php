@@ -1,7 +1,7 @@
 <?php
 include("models/accounts.php");
 include("services/components.php");
-$accountlists = $account->get();
+$accountlists = $account->get('', '', '');
 ?>
 
 <script type="text/javascript">

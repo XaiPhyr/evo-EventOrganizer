@@ -1,7 +1,7 @@
 <?php
 include("models/venues.php");
 include("services/components.php");
-$venuelists = $venue->get();
+$venuelists = $venue->get('', '', '');
 ?>
 
 <script type="text/javascript">

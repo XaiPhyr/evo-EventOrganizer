@@ -6,6 +6,7 @@ $announcements = $event->get('announcements', '', '');
 
 $current_date = $component->dateFormat('now', 'date');
 $current_month = $component->dateFormat('now', 'month');
+$count = 0;
 ?>
 
 <script>

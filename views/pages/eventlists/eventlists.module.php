@@ -2,7 +2,7 @@
 include("models/events.php");
 include("services/components.php");
 
-$eventlists = $event->get();
+$eventlists = $event->get('', '', '');
 $current_date = $component->dateFormat('now', 'date');
 
 if ($_GET['flag'] == 'inactive') {
