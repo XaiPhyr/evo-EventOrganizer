@@ -1,7 +1,7 @@
 <?php
 include("models/events.php");
 include("services/components.php");
-$lists = $event->get('');
+$lists = $event->get('', '', '');
 $announcements = $event->get('announcements');
 
 $current_date = $component->dateFormat('now', 'date');
