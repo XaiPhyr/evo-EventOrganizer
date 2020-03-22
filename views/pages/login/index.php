@@ -11,7 +11,7 @@
     <title>EvOApp | beta-0.01b</title>
 </head>
 
-<div class="container col-3 mt-5">
+<div class="container col-12 col-lg-3 mt-5">
     <div class="card">
         <div class="card-body">
             <form action="action.php" method="post">
