@@ -40,6 +40,7 @@ $login = $_SESSION['login'];
                 <?php } else { ?>
                     <li class="nav-item"><a href="?page=login" class="nav-link">Login</a></li>
                 <?php } ?>
+                <li class="nav-item"><a href="https://drive.google.com/open?id=1zyt5vgttjlp9pzd-aRftaCzgiUKun8mA" class="nav-link">Users Manual</a></li>
             </ul>
         </div>
     </div>
