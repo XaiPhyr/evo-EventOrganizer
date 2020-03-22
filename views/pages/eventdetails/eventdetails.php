@@ -7,7 +7,7 @@ include("eventdetails.module.php");
         <div class="col-12">
             <form action="action.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $data->event_header ?>">
-                <?php if ($login->status == 'Admin') { ?>
+                <?php if (@$login->status == 'Admin') { ?>
                     <div class="float-right btn-group">
                         <?php echo $component->preview_buttons('edit', $data->eventCode); ?>
                         <?php echo $component->preview_buttons($data->flag, 'event'); ?>
@@ -37,5 +37,5 @@ include("eventdetails.module.php");
         </div>
     </div>
 
-    <?php if ($login->status == 'Admin') include("_attendances.php"); ?>
+    <?php if (@$login->status == 'Admin') include("_attendances.php"); ?>
 </div>

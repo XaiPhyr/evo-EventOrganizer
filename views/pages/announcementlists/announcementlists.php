@@ -19,12 +19,12 @@ include("announcementlists.module.php");
 
                 <tbody style="cursor:pointer">
                     <?php foreach ($announcementlists as $item) {
-                        $count++; ?>
+                        @$count++; ?>
 
                         <tr onclick="preview(<?php echo $item->Id ?>)">
                             <td><?php echo $count ?></td>
                             <td><?php echo $item->announcementHeader ?></td>
-                            <td><?php echo $component->status($item->status) ?></td>
+                            <td><?php echo $component->status($item->status, '') ?></td>
                             <td align="right"><?php echo $component->dateFormat($item->created) ?></td>
                         </tr>
                     <?php } ?>

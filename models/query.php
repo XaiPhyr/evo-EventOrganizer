@@ -42,6 +42,6 @@ class QueryGetter extends Database
         if ($s == 'all') {
             while ($items = mysqli_fetch_object($q)) $lists[] = $items;
             return @$lists;
-        } else return mysqli_fetch_object($q);
+        } else return mysqli_fetch_object(@$q);
     }
 }

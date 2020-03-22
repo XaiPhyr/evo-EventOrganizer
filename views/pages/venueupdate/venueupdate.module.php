@@ -1,8 +1,8 @@
 <?php
 include("models/venues.php");
 
-$id = $_GET['id'];
-$data = $venue->get('single', $id);
+@$id = $_GET['id'];
+$data = $venue->get('single', $id, '');
 ?>
 
 <script>

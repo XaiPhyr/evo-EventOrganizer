@@ -19,7 +19,7 @@ include("accountslists.module.php");
 
                 <tbody style="cursor:pointer">
                     <?php foreach ($accountlists as $item) {
-                        $count++; ?>
+                        @$count++; ?>
 
                         <tr onclick="preview(<?php echo '\'' . $item->username . '\'' ?>)">
                             <td><?php echo $count ?></td>
