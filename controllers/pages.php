@@ -35,13 +35,9 @@ class PagesControllers
         }
     }
 
-    function dashboard($flag = 'lists')
+    function dashboard()
     {
-        switch ($flag) {
-            default:
-                return $this->webpage('dashboard/index.php');
-                break;
-        }
+        return $this->webpage('dashboard/index.php');
     }
 
     function register($flag = 'register')
